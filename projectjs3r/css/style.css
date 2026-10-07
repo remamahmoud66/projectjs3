@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f2f4f8; color: #1f2937; padding: 40px 16px; }
+.card { max-width: 420px; margin: 0 auto; background: #ffffff; border-radius: 14px; padding: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+h1 { color: #7a1f35; margin-bottom: 6px; }
+h2 { font-size: 18px; margin-bottom: 14px; }
+.subtitle { color: #6b7280; font-size: 14px; margin-bottom: 20px; }
+label { display: block; font-size: 14px; margin-bottom: 6px; }
+input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font: inherit; margin-bottom: 14px; }
+.check { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; font-size: 14px; }
+.check label { margin: 0; }
+button { width: 100%; padding: 11px; border: none; border-radius: 8px; background: #7a1f35; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+button:hover { background: #5e1628; }
+.message { font-size: 14px; min-height: 20px; margin-bottom: 12px; }
+.message.error { color: #dc2626; }
+.message.success { color: #16a34a; }
+.switch { text-align: center; margin-top: 16px; font-size: 14px; }
+a { color: #7a1f35; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; }
+th { color: #6b7280; }
+.hidden { display: none; }
+
+.dashboard-page { padding: 0; background: #ffffff; }
+.layout { display: flex; min-height: 100vh; }
+
+.sidebar { width: 230px; background: #f1eeee; border-right: 1px solid #e4dede; padding: 28px 20px; display: flex; flex-direction: column; }
+.logo { font-size: 30px; font-weight: 800; color: #7a1f35; margin-bottom: 32px; }
+.side-menu { flex: 1; }
+.side-link { display: block; padding: 11px 14px; border-radius: 8px; text-decoration: none; font-weight: 600; color: #1f2937; }
+.side-link.active { background: #7a1f35; color: #ffffff; }
+.logout-btn { margin-top: 20px; }
+
+.content { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.navbar { background: #f1eeee; border-bottom: 1px solid #e4dede; padding: 14px 28px; display: flex; justify-content: flex-end; align-items: center; gap: 16px; }
+.nav-name { font-size: 14px; color: #4b5563; }
+.small-btn { width: auto; padding: 8px 14px; font-size: 14px; }
+
+.main { padding: 32px 28px; }
+.welcome { font-size: 28px; color: #7a1f35; text-transform: uppercase; }
+.panel { background: #ffffff; border: 1px solid #ece7e7; border-radius: 12px; padding: 22px; margin-bottom: 20px; }
+.info p { padding: 9px 0; border-bottom: 1px solid #f1eeee; font-size: 15px; }
+.info span { color: #6b7280; display: inline-block; width: 110px; }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.modal-overlay.hidden { display: none; }
+.modal { background: #ffffff; border-radius: 14px; padding: 24px; width: 100%; max-width: 420px; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.modal-header h2 { margin: 0; color: #7a1f35; }
+.close-btn { width: auto; background: transparent; color: #6b7280; font-size: 26px; padding: 0 6px; line-height: 1; }
+.close-btn:hover { background: transparent; color: #7a1f35; }
+
+@media (max-width: 700px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; flex-direction: row; align-items: center; gap: 12px; padding: 14px 16px; border-right: none; border-bottom: 1px solid #e4dede; }
+  .logo { font-size: 22px; margin: 0; }
+  .side-menu { flex: 1; }
+  .side-link { display: inline-block; padding: 8px 12px; }
+  .logout-btn { width: auto; margin: 0; padding: 8px 12px; }
+  .navbar { padding: 12px 16px; justify-content: space-between; }
+  .main { padding: 20px 16px; }
+  .welcome { font-size: 22px; }
+  .info span { display: block; width: auto; }
+}
+#courses-message:empty { display: none; }

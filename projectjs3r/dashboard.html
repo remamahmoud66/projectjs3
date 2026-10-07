@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduTrack | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="logo">EduTrack</h2>
+      <nav class="side-menu">
+        <a href="dashboard.html" class="side-link active">Dashboard</a>
+      </nav>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+    </aside>
+
+    <div class="content">
+      <header class="navbar">
+        <span class="nav-name" id="nav-name"></span>
+        <button id="open-modal" class="small-btn">Update Profile</button>
+      </header>
+
+      <main class="main">
+        <h1 class="welcome" id="welcome"></h1>
+        <p class="subtitle" id="login-time"></p>
+
+        <section class="panel">
+          <h2>Student Information</h2>
+          <div class="info">
+            <p><span>Name</span><strong id="profile-name"></strong></p>
+            <p><span>Email</span><strong id="profile-email"></strong></p>
+            <p><span>Student ID</span><strong id="profile-student-id"></strong></p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Grades</h2>
+          <p id="courses-message" class="message"></p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Teacher</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody id="courses-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="profile-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Update Profile</h2>
+        <button id="close-modal" class="close-btn">&times;</button>
+      </div>
+      <p id="profile-message" class="message"></p>
+      <form id="profile-form" novalidate>
+        <label for="new-name">Full Name</label>
+        <input type="text" id="new-name">
+
+        <label for="new-email">Email</label>
+        <input type="email" id="new-email">
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
